@@ -18,7 +18,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    raise Exception("Some exception")
     if message.content.startswith('!id '):
         command = message.content[4:]
         if command.startswith('iam '):
