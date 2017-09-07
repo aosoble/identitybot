@@ -9,7 +9,6 @@ redirectOutputToLog()
 
 client = discord.Client()
 
-
 CLIENT_TOKEN = os.environ['CLIENT_TOKEN']
 
 @client.event

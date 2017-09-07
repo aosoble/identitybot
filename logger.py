@@ -23,7 +23,7 @@ class StreamToLogger(object):
         pass
 
 logging.basicConfig(
-   level=logging.DEBUG,
+   level=logging.INFO,
    format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
    filename="out.log",
    filemode='a'
