@@ -50,5 +50,13 @@ async def on_message(message):
             server = user.server
             introduction.deleteIntroduction(server.id,user.id)
             await client.send_message(message.author, "Your introduction has now been deleted.")
+        elif command.startswith('help'):
+            client.send_message(message.author, """
+            `iam [introduction]`: This command will save your whatever you set as [introduction] with the bot. Your introduction can be as long as you want. Other users can get your introduction using the command below.\n
+            `whois @user1 @user2`: This command will get introductions for the users you mention in the message and DM them to you. Note that it sends a DM and does not reply on the same channel.\n
+            `list`: This command lists all users who have saved introductions with Identity Bot on your server.\n
+            `delete`: This command will delete your introduction. Other users won't be able to get your introduction any more after using this command.\n
+            `help`: Displays this help message.
+            """)
 
 client.run(CLIENT_TOKEN)
