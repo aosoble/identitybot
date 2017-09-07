@@ -63,3 +63,7 @@ class Introduction:
             "DELETE FROM introduction WHERE server_id = %s AND user_id = %s", (server_id,user_id,)
         )
         self.conn.commit()
+
+    def __del__(self):
+        self.conn.close()
+

@@ -8,7 +8,7 @@ from logger import StreamToLogger, redirectOutputToLog
 redirectOutputToLog()
 
 client = discord.Client()
-introduction = Introduction()
+
 
 CLIENT_TOKEN = os.environ['CLIENT_TOKEN']
 
@@ -19,6 +19,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('!id '):
+        introduction = Introduction()
         command = message.content[4:]
         if command.startswith('iam '):
             intro = command[4:]
